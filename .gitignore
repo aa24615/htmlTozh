@@ -1,6 +1,6 @@
 
 *.log
-.ieda
+.idea
 test
 test_zh_cn
 node_modules
