@@ -1,0 +1,6 @@
+
+*.log
+.ieda
+test
+test_zh_ch
+node_modules
