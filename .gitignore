@@ -2,5 +2,5 @@
 *.log
 .ieda
 test
-test_zh_ch
+test_zh_cn
 node_modules
