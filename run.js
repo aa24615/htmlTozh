@@ -7,64 +7,68 @@ const {translate} = require('./lib/translate');
 
 const fse = require('fs-extra');
 
-let dir = path.join(process.cwd(),'test');
-
-copyFolder(dir,dir+'_zh_cn');
-
-let list = getList(dir+'_zh_cn');
+let dir = path.join(process.cwd(), 'html/getcomposer.org');
 
 
-list.forEach(file=>{
-  let jsonFile = parse(file);
+
+
+//复盖目标目录
+let outDir = dir + '_zh_cn';
+copyFolder(dir, outDir);
+
+let list = getList(dir, outDir);
+//生成json
+
+list.forEach(file => {
+    parse(file);
 });
-
 translate(list);
 
+//同步拷贝目录
 function copyFolder(copiedPath, resultPath) {
 
-  if(fs.existsSync(resultPath)){
-    fse.removeSync(resultPath)
-  }
+    if (fs.existsSync(resultPath)) {
+        fse.removeSync(resultPath)
+    }
 
-  fs.mkdirSync(resultPath);
+    fs.mkdirSync(resultPath);
 
-  if (fs.existsSync(copiedPath)) {
-    fse.copySync(copiedPath,resultPath)
-  } else {
-    console.log('这个目录不存在:', copiedPath);
-  }
+    if (fs.existsSync(copiedPath)) {
+        fse.copySync(copiedPath, resultPath)
+    } else {
+        console.log('这个目录不存在:', copiedPath);
+    }
 }
 
-
-function getList(dir='') {
-  if(dir==""){
-    console.log('请输入目录');
-    return;
-  }
-
-  let files = fs.readdirSync(dir);
-  let list = [];
-  files.forEach(async (item, index) => {
-    let fPath = path.join(dir,item);
-
-    console.log(dir,item);
-
-    let stat = fs.statSync(fPath);
-    if(stat.isDirectory() === true) {
-
-      let sublist = getList(fPath);
-      sublist.forEach(file=>{
-        list.push(file);
-      })
+//获取所有html或htm
+function getList(dir = '') {
+    if (dir == "") {
+        console.log('请输入目录');
+        return;
     }
 
-    if (stat.isFile() === true) {
-      let ext = fPath.slice(-4);
-      if(ext=='html'){
-        list.push(fPath);
-      }
-    }
-  });
+    let files = fs.readdirSync(dir);
+    let list = [];
+    files.forEach(async (item, index) => {
+        let fPath = path.join(dir, item);
 
-  return list;
+        console.log(dir, item);
+
+        let stat = fs.statSync(fPath);
+        if (stat.isDirectory() === true) {
+
+            let sublist = getList(fPath);
+            sublist.forEach(file => {
+                list.push(file);
+            })
+        }
+
+        if (stat.isFile() === true) {
+            if (fPath.slice(-4) == 'html' || fPath.slice(-3) == 'htm') {
+                list.push(fPath);
+            }
+        }
+    });
+
+    return list;
 }

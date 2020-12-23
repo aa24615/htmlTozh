@@ -5,3 +5,5 @@ test
 test_zh_cn
 node_modules
 .DS_Store
+cache
+html
