@@ -7,16 +7,21 @@
 
 下载
 
-> git clone git@github.com:aa24615/htmlTozh.git
+```
+ git clone git@github.com:aa24615/htmlTozh.git
+```
 
 如果网络较慢,可使用国内gitee
 
-> git clone git@gitee.com:flash127/htmlToZh.git
+```
+git clone git@gitee.com:flash127/htmlToZh.git
+```
 
 安装依懒
 
-> npm i
-
+```
+npm i
+```
 
 ### 准备
 
