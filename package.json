@@ -4,7 +4,8 @@
   "description": "批量html翻译成中文",
   "main": "run.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node run.js "
   },
   "author": "读心印 <839024615@qq.com>",
   "license": "ISC",
