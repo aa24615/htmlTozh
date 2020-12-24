@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const fs = require('fs')
 const path = require('path');
 const parse = require('./lib/parse');
 const {translate} = require('./lib/translate');
@@ -21,14 +21,21 @@ if(!dirname){
 
 let dir = path.join(process.cwd(), 'html', dirname);
 
+
 //目标目录
 let outDir = dir + '_zh_cn';
-tools.copyFolder(dir, outDir);
+
+
+if(!fs.existsSync(outDir)){
+    tools.copyFolder(dir, outDir);
+}
+
 
 let list = tools.getList(outDir);
 
 //生成json
 list.forEach(file => {
+    console.log('html',file)
     parse(file);
 });
 
