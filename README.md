@@ -34,6 +34,8 @@ npm i
 
 ### 处理
 - 自定义译文与替换字符 放在原目录下 `config.json` 中
+- translation 为自定义译文
+- replace 需要替换的字符
 
 示例:
 
