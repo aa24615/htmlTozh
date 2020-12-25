@@ -32,6 +32,35 @@ npm i
 - 将你的手册或需要翻译的文件 放在根目录下 `html/项目名` 中
 - 例如 nodejs文档 放在 `html/nodedoc/`
 
+### 处理
+- 自定义译文与替换字符 放在原目录下 `config.json` 中
+
+示例:
+
+```javascript
+
+{
+  "translation": [
+    {
+      "name": "Composer",
+      "value": "PHP依赖关系管理器"
+    },
+    {
+      "name": "\uD83C\uDFE0 Home",
+      "value": "\uD83C\uDFE0 首页"
+    }
+  ],
+  "replace": [
+    {
+      "name": "</title>",
+      "value": "Composer中文手册 </title>"
+    }
+  ]
+}
+
+
+```
+
 ### 条件
 
 - 只翻译 `.html` 或 `.htm` 文件
@@ -47,6 +76,7 @@ npm i
 ### 缓存
 
 - 无需担心翻译中断,需要重新翻译,内置翻译缓存,缓存文件在根目录的`cache`下,如果强制更新译文,请删除`cache`目录即可
+
 
 
 
