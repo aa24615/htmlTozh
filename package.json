@@ -1,14 +1,15 @@
 {
   "name": "htmltozh",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "批量html翻译成中文",
   "main": "src/htmlToZh.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/htmlToZh.js "
+    "dev": "node src/htmlToZh.js ",
+    "fix": "./node_modules/.bin/eslint --ext .js,.html src/ --fix"
   },
   "bin": {
-    "command-name": "./src/htmlToZh.js"
+    "htmlToZh": "./src/htmlToZh.js"
   },
   "author": "读心印 <839024615@qq.com>",
   "license": "ITM",
@@ -22,5 +23,11 @@
     "posthtml-parser": "^0.4.2",
     "posthtml-render": "^1.2.2",
     "spark-md5": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-react": "^7.23.1"
   }
 }
