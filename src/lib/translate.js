@@ -14,7 +14,6 @@ const translate =  (list, listIndex = 0) => {
         return;
     }
 
-
     const suffix = tools.getFileSuffix(list[listIndex]);
     const jsonFile = list[listIndex].replace('.' + suffix, '.json')
 

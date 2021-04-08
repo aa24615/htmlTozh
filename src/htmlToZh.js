@@ -43,6 +43,4 @@ list.forEach(file => {
 });
 
 
-
-
 translate.translate(list,fileIndex);

@@ -1,14 +1,17 @@
 {
-  "name": "htmlToZh",
-  "version": "1.0.0",
+  "name": "htmltozh",
+  "version": "2.0.0",
   "description": "批量html翻译成中文",
-  "main": "run.js",
+  "main": "src/htmlToZh.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node run.js "
+    "dev": "node src/htmlToZh.js "
+  },
+  "bin": {
+    "command-name": "./src/htmlToZh.js"
   },
   "author": "读心印 <839024615@qq.com>",
-  "license": "ISC",
+  "license": "ITM",
   "dependencies": {
     "axios": "^0.19.2",
     "convert-excel-to-json": "^1.6.1",
