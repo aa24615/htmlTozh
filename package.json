@@ -1,5 +1,5 @@
 {
-  "name": "htmlToZh",
+  "name": "htmltozh",
   "version": "1.0.0",
   "description": "批量html翻译成中文",
   "main": "run.js",
