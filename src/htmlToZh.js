@@ -1,16 +1,21 @@
 #!/usr/bin/env node
 
+
+
+
+
 const fs = require('fs');
 const path = require('path');
 const parse = require('./lib/parse');
 const translate = require('./lib/translate');
 const tools = require('./lib/tools');
+const argv =  require('./lib/utils/getPath');
 
 
-const dirname = process.argv[2]; // 项目名
+argv.setArgv(process.argv);
 
-const fileIndex = process.argv[3] || 0; // 从第几个开始
-
+argv.getConfigPath();
+argv.getOutPath();
 
 
 if (!dirname) {
