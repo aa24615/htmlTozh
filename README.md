@@ -84,13 +84,7 @@ npm i
 ### 常见问题
 
 - 翻译过程中,如果遇到报错,请重新执行命令
-- 如果还是无法解决,可选第n个文件继续翻译 如第100个文件 `node run.js 项目名 100`
+- 如果还是无法解决,可选第n个文件继续翻译 如第100个文件 `node src/run.js 项目名 100`
 
 
-### 联系我们
 
-- QQ群: [295968682](https://qm.qq.com/cgi-bin/qm/qr?k=rgnEr60hWRuAkEj9nLzGlzvYmBfQsrWW&jump_from=webapi)
-
-- 博客: [http://blog.php127.com](http://blog.php127.com)
-
-- 更多开源项目: [https://github.com/aa24615](https://github.com/aa24615)
