@@ -6,7 +6,7 @@
 
 本程序需要安装 nodejs 与 npm 
 
-百度翻释api
+百度翻译api
 
 
 ### 安装
@@ -37,8 +37,8 @@ npm i
 
 ```json
 {
-  "appid": "您的百度翻释appid",
-  "secret" : "您的百度翻释secret"
+  "appid": "您的百度翻译appid",
+  "secret" : "您的百度翻译secret"
 }
 ```
 
