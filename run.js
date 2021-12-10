@@ -10,6 +10,17 @@ let dirname = process.argv[2]; //项目名
 
 let fileIndex = process.argv[3] || 0; //从第几个开始
 
+
+const config  = require( path.join(process.cwd(), 'config.json'));
+
+if(!config.appid || !config.secret){
+    console.error("请配置appid and secret")
+    return;
+}
+
+
+
+
 if(!dirname){
     console.error("请输入翻译文件夹 ");
     console.log('npm run [dirname]');
@@ -36,13 +47,12 @@ let list = tools.getList(outDir);
 translate.configTranslate(dir+'/config.json')
 
 
+
+
 //生成json
 list.forEach(file => {
     console.log('html',file)
     parse(file);
 });
-
-
-
 
 translate.translate(list,fileIndex);

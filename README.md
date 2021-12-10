@@ -4,7 +4,9 @@
 
 ### 准备
 
-本程序需要安装 nodejs 与 npm
+本程序需要安装 nodejs 与 npm 
+
+百度翻释api
 
 
 ### 安装
@@ -31,6 +33,15 @@ npm i
 
 - 将你的手册或需要翻译的文件 放在根目录下 `html/项目名` 中
 - 例如 nodejs文档 放在 `html/nodedoc/`
+- 请在根目录 `config.json` 中配置您的百度翻译api appid 与 secret
+
+```json
+{
+  "appid": "您的百度翻释appid",
+  "secret" : "您的百度翻释secret"
+}
+```
+
 
 ### 处理
 
@@ -91,6 +102,14 @@ npm i
 
 - QQ群: [295968682](https://qm.qq.com/cgi-bin/qm/qr?k=rgnEr60hWRuAkEj9nLzGlzvYmBfQsrWW&jump_from=webapi)
 
-- 博客: [http://blog.php127.com](http://blog.php127.com)
 
-- 更多开源项目: [https://github.com/aa24615](https://github.com/aa24615)
+### 参与贡献
+
+1. fork 当前库到你的名下
+2. 在你的本地修改完成审阅过后提交到你的仓库
+3. 提交 PR 并描述你的修改，等待合并
+
+
+## License
+
+[MIT license](https://opensource.org/licenses/MIT)
