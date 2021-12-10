@@ -34,7 +34,7 @@ npm i
 - 将你的手册或需要翻译的文件 放在根目录下 `html/项目名` 中
 - 例如 nodejs文档 放在 `html/nodedoc/`
 - 请在根目录 `config.json` 中配置您的百度翻译api appid 与 secret
-
+请自行进入 [https://fanyi-api.baidu.com/](https://fanyi-api.baidu.com/) 申请接口
 ```json
 {
   "appid": "您的百度翻译appid",
